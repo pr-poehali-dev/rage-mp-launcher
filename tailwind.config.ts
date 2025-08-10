@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'orbitron': ['Orbitron', 'sans-serif'],
+				'roboto': ['Roboto', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Gaming colors
+				'neon-cyan': '#00ffff',
+				'neon-magenta': '#ff00ff', 
+				'electric-cyan': '#4FDAFF',
+				'electric-magenta': '#FF4FDA',
+				'gaming-dark': '#1a1a1a',
+				'gaming-darker': '#0f0f0f',
+				'gaming-gray': '#333333',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +96,29 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px #4FDAFF, 0 0 40px #4FDAFF, 0 0 60px #4FDAFF'
+					},
+					'50%': {
+						boxShadow: '0 0 30px #FF4FDA, 0 0 60px #FF4FDA, 0 0 90px #FF4FDA'
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						filter: 'drop-shadow(0 0 8px #4FDAFF)'
+					},
+					'50%': {
+						filter: 'drop-shadow(0 0 20px #FF4FDA)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			}
 		}
 	},
